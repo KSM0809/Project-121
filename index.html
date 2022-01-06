@@ -1,0 +1,254 @@
+<html>
+<head>
+  <title>Real Time Image Identification App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body background="bg.jpeg">
+      <center>
+      <h2 id="head">Case Study Between</h2>
+        <h2 id="ggl">Google Lens
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Google_Lens_-_new_logo.png/220px-Google_Lens_-_new_logo.png" style="width: 75px;">
+          <p id="p">VS</p>
+        </h2>
+        <h2 id="mobile" class="btn btn-primary">MobileNet</h2>
+   
+    <script src="main.js"></script>
+
+    <ol>
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="cupcake.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Cupcake</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Stove</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="earphones.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Apple Earphones</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Knot</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="map.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Atlas</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Jigsaw puzzle</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="pom pom.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Pom Poms</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Stole</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="scissors.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Scissors</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Scissors</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Draw</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="slippers.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b></b>Crocs Slippers
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Clogs</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="specs.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Spectacles</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Stethoscope</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="telephone.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Landline</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Telephone</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Draw</h4>
+      </div>
+      <br>
+
+      <div class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="toothbrush.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Toothbrush</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Brush</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+      <br>
+
+      <div style="margin-bottom: 20px;" class="test_image_and_result col-xs-12">
+        <li class="col-sm-4 col-xs-12">
+          <b>Test Image- </b>
+          <img id="one" src="wreath.jpeg" class="img-responsive">
+        </li>
+
+        <h5 style=" float: none; margin-right: 10px; width: fit-content; padding-left: 20px; padding-right: 20px;" class=" btn btn-info col-sm-4 col-xs-12">Output on <b>Google Lens</b> - <b>Christmas Wreath</b>
+          <span></span>
+        </h5>
+
+        <h5 style="float: none; width: fit-content; padding-left: 20px; padding-right: 20px;" class="btn btn-success col-sm-4 col-xs-12">Output on <b>MobileNet</b> - <b>Plant</b>
+          <span></span>
+        </h5>
+        <br>
+        <br>
+          <h4 id="result_lbl">Result- </h4>
+          <hr>
+          <h4>Google Lens is more accurate</h4>
+      </div>
+
+      <div id="conclusion" class="btn btn-warning col-xs-12">
+        <h5>I have tested a totoal of 10 images in my Case Study.
+          <b>Google Lens</b> had identified all of the images correctly, 
+          <br>
+          whereas <b>MobileNet</b> had identified only 2 images correctly.
+        </h5>
+        <hr>
+        <h4 class="btn btn-success" id="final"><b>Thus, I conclude that Google Lens is more accurate than MobileNet through this Case Study.</b></h4>
+      </div>
+
+    </ol>
+  </center>
+  </body>

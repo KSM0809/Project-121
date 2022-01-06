@@ -1,0 +1,72 @@
+#head{
+    font-family: 'Indie Flower', cursive;
+}
+
+#p{
+    font-family: 'Indie Flower', cursive;
+    margin-top: 0px;
+    color: black;
+}
+
+#mobile{
+    font-size: 20;
+    margin-top: 0px;
+    border-radius: 10px;
+    font-family: 'Orbitron', sans-serif;
+    color: gold;
+}
+
+#ggl{
+    margin-top: 0px;
+    font-family: 'Orbitron', sans-serif;
+    color: red;
+}
+
+.test_image_and_result{
+    border-radius: 20px;
+    background-color: lightblue;
+    box-shadow: 5px 5px 5px grey;
+    width: 80%;
+    margin-top: 30px;
+    margin-left: 110px;
+    padding-top: 10px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+#one{
+    margin-top: 10px;
+    width: 200px;
+}
+
+#result_lbl{
+    padding-top: 20px;
+}
+
+#conclusion{
+    align-self: center;
+    border-radius: 20px;
+    width: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    float: none;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    margin-top: 20px;
+}
+
+@keyframes example{
+    from{box-shadow: 5px 5px 38px red;}
+    to{box-shadow: 5px 5px 38px gold;}
+}
+
+
+#final{
+font-family: 'Orbitron', sans-serif;
+}
+
+
